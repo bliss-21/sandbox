@@ -1,1 +1,1 @@
-Ordena automáticamente la carpeta de descargas cada vez que se ejecuta, en mi caso se ejecutara cada vez que se enciende el PC, mueve los archivos dependiendo de la extensión, mueve las carpetas y elimina los archivos temporales de descargas.
+Ordena automáticamente la carpeta de descargas cada vez que se ejecuta el script de python, en mi caso se ejecutara cada vez que se enciende el PC, mueve los archivos dependiendo de la extensión, mueve las carpetas y elimina los archivos temporales de descargas.
