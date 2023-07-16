@@ -1,3 +1,4 @@
+/*like.js*/
 const img = document.querySelector('img');
 const icon = document.querySelector('svg');
 
