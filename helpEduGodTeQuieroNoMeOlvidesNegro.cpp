@@ -85,12 +85,8 @@ int main() {
 
 /*
 En este programa, se define la estructura de orden 3 llamada Orden3, que tiene dos matrices: matriz3x3 de orden 3 y matriz2x2 de orden 2. Luego, se crea un arreglo de Orden3 llamado estructura con tamaño 3.
-
 La función generarNumeroAleatorio se utiliza para generar números aleatorios en el rango especificado.
-
 El bucle for anidado se utiliza para llenar las celdas con números aleatorios utilizando la función generarNumeroAleatorio.
-
 Después, se muestra la matriz generada y se calcula el promedio por fila en la matriz de orden 3 utilizando la función calcularPromedioFila. Se imprime el resultado en la consola.
-
 Recuerda que al compilar y ejecutar el programa, los resultados pueden variar debido a la generación aleatoria de los números.
 */
