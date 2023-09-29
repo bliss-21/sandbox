@@ -23,6 +23,35 @@
                 
             });
         }
+
+
+
+var miDiv = document.getElementById("miDiv"); // Reemplaza "miDiv" con el ID de tu div
+var elementos = miDiv.querySelectorAll("input, select");
+
+elementos.forEach(function(elemento) {
+    if (elemento.hasAttribute("required")) {
+        if (elemento.tagName.toLowerCase() === "input") {
+            if (elemento.type === "text") {
+                console.log("Es un input de texto requerido.");
+                // Realiza acciones específicas para input de texto requerido
+            } else if (elemento.type === "number") {
+                console.log("Es un input de número requerido.");
+                // Realiza acciones específicas para input de número requerido
+            } else if (elemento.type === "date") {
+                console.log("Es un input de fecha requerido.");
+                // Realiza acciones específicas para input de fecha requerido
+            } else if (elemento.type === "radio") {
+                console.log("Es un radio button requerido.");
+                // Realiza acciones específicas para radio button requerido
+            }
+        } else if (elemento.tagName.toLowerCase() === "select") {
+            console.log("Es un elemento select requerido.");
+            // Realiza acciones específicas para elementos select requeridos
+        }
+    }
+});
+
     </script>
 </body>
 </html>
