@@ -83,8 +83,30 @@ $(document).ready(function () {
 
       });
 
+//esto obtiene la row como objeto
+$('#myTable').DataTable({
+    "ajax":{
+        "url":"@Url.Action("GetDataJson", "Home")",
+        "type":"GET",
+        "datatype":"json"
+    },
+    "columns":[
+        {"data":"userID"},
+        {"data":"nombreUsuario"},
+        {"data":"contrasenaHash"},
+        {"data":"email"},
+        {"data":"fechaRegistro"},
+        { 'data': null, title: 'Action', "render": function (data, type, row, meta) { return '<div class="btn-group"> <button type="button" class="btn btn-primary" >Memo</button></div>' } }
 
+    ]
+});
 
+//function to write actual data of a table row
+$('#myTable tbody').on('click', 'tr', function () {
+    var tr = $(this).closest('tr');
+    var data = $('#myTable').DataTable().row(tr).data();
+    console.log(data);
+});
 
     </script>
 </body>
