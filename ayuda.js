@@ -52,6 +52,40 @@ elementos.forEach(function(elemento) {
     }
 });
 
+
+//esto funciona
+$(document).ready(function () {
+          $('#myTable').DataTable({
+            "ajax":{
+                "url":"@Url.Action("GetDataJson", "Home")",
+                "type":"GET",
+                "datatype":"json"
+            },
+            "columns":[
+                {"data":"userID"},
+                {"data":"nombreUsuario"},
+                {"data":"contrasenaHash"},
+                {"data":"email"},
+                {"data":"fechaRegistro"},
+                { 
+                    "data": "userID", "width":"50px", "render": function (data) {
+                        return '<button type="button" id="'+data+'" class="btn btn-primary btnEdit">Algo</button>'
+                    }
+                }
+            ]
+          });
+
+          $(document).on("click", ".btnEdit", function () {
+            var id = $(this).attr("id");
+
+            alert(id);
+          });
+
+      });
+
+
+
+
     </script>
 </body>
 </html>
